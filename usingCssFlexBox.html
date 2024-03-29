@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 800px;
+            width: 100%;
+        }
+        .container{
+            display: block;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            color: rgb(0, 0, 0);
+        }
+        .A12{
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .a1{height: 40px; width: 200px; background-color: purple;}
+        .a2{height: 40px; width: 75px; background-color: rgb(89, 181, 89);}
+
+        .B12{
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .b1{height: 40px; width: 50px; background-color: purple;}
+        .b2{height: 40px; width: 330px; background-color: rgb(89, 181, 89);}
+        .b3{height: 40px; width: 75px; background-color: purple;}
+
+        .C12{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .c1{height: 40px; width: 40px; background-color: purple;}
+        .c2{height: 40px; width: 40px; background-color: rgb(89, 181, 89);}
+        .c3{height: 40px; width: 40px; background-color: purple;}
+        .c4{height: 40px; width: 40px; background-color: rgb(89, 181, 89);}
+
+        .D12{
+            display: flex;
+            border: gray solid 1px;
+            height: 60px;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        .d1{height: 30px; width: 40px; background-color: rgb(89, 181, 89);}
+        .d2{height: 30px; width: 720px;}
+        .d3{height: 30px; width: 40px; background-color: rgb(89, 181, 89);}
+
+        .SearchContainer{
+            height: 80px;
+            width: 100%;
+            margin-bottom: 2rem;
+            background-color: blueviolet;
+            border-radius: 14px;
+            box-shadow: 0 1px 2px rgba(7, 7, 7, 0.698);
+            transition: all ease-in .3s;
+        }
+        .SearchContainer:hover{
+            box-shadow: 0 1px 10px blueviolet;
+            transition: all ease-in .3s;
+        }
+        .searchbar{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 30px;
+        }
+        .Home{
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 20px;
+            left: 12px;
+        }
+        input{
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            width: 520px;
+            transition: all ease-in-out .3s;
+            position: relative;
+            bottom: 10px;
+            box-shadow: 0 4px 8px rgba(7, 7, 7, 0.698);
+        }
+        input:hover{
+            box-shadow: 0 10px 10px rgba(7, 7, 7, 0.698);
+            transition: all ease-in-out .3s;
+        }
+        ::placeholder{
+            font-size: 11px;
+            opacity: 0.6;
+            position: relative;
+            left: 10px;
+            bottom: 1px;
+        }
+        button{
+            width: 100px;
+            border: #fff solid 1px;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            position: relative;
+            right: 12px;
+            transition: all ease-out .3s;
+            border-radius: 4px;
+            bottom: 10px;
+            height: 40px;
+        }
+        button:hover{
+            transform: scale(1.1, 1.1);
+            border-radius: 18px;
+            transition: all ease-in .3s;
+            background-color: #f1f1f1cb;
+            color: #1b1b1bf9;
+            box-shadow: 0 10px 10px rgba(7, 7, 7, 0.698);
+        }
+        .list{
+            height: 199px;
+            width: 440px;
+            box-shadow: 0 2px 10px rgba(7, 7, 7, 0.698);
+            display: block;
+            box-sizing: border-box;
+            border-radius: 5px;
+            position: relative;
+            left: 10rem;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .home2{
+            padding: 17px 20px;
+            transition: all ease-in-out .2s;
+        }
+        .home2:hover{
+            background-color: rgb(77, 77, 219);
+            transition: all ease-in-out .2s;
+            color: #fff;
+            border-radius: 5px 5px 0 0;
+            transform: scale(1.1);
+            box-shadow:  27px 27px 54px #5a5a5a,
+             0px 5px 10px #ffffff;
+            border-radius: 5px;
+
+        }
+        .notifications{
+            padding: 17px 20px;
+            transition: all ease-in-out .2s;
+           
+        }
+        .notifications:hover{
+            background-color: rgb(77, 77, 219);
+            transition: all ease-in-out .2s;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow:  27px 27px 54px #5a5a5a,
+             0px 5px 10px #ffffff;
+            border-radius: 5px;
+        }
+        .messages{
+            padding: 17px 20px;
+            transition: all ease-in-out .2s;
+        }
+        .messages:hover{
+            background-color: rgb(77, 77, 219);
+            transition: all ease-in-out .2s;
+            color: #fff;
+            border-radius: 5px;
+            transform: scale(1.1);
+            box-shadow:  27px 27px 54px #5a5a5a,
+             0px 5px 10px #ffffff;
+        }
+        .l1{
+            background-color: rgb(77, 77, 219);
+            padding: .5px 8px;
+            color: #fff;
+            border-radius: 14px;
+            position: relative;
+            left: 17rem;
+            border: white solid 1px;
+        }
+        .l2{
+            background-color: rgb(77, 77, 219);
+            padding: .5px 8px;
+            color: #fff;
+            border-radius: 14px;
+            position: relative;
+            left: 13.7rem;
+            border: white solid 1px;
+        }
+        .l3{
+            background-color: rgb(77, 77, 219);
+            padding: .5px 8px;
+            color: #fff;
+            border-radius: 14px;
+            position: relative;
+            left: 15.6rem;
+            border: white solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="A12">
+            <div class="a1">200px</div>
+            <div class="a2">75px</div>
+        </div>
+    
+    
+        <div class="B12">
+            <div class="b1">item1</div>
+            <div class="b2">item2</div>
+            <div class="b3">item3</div>
+        </div>
+    
+    
+        <div class="C12">
+            <div class="c1">item1</div>
+            <div class="c2">item2</div>
+            <div class="c3">item3</div>
+            <div class="c4">item4</div>
+        </div>
+    
+        
+        <div class="D12">
+            <div class="d1">item1</div>
+            <div class="d2"></div>
+            <div class="d3">item2</div>
+        </div>
+
+
+        <div class="SearchContainer">
+            <div class="searchbar">
+                <div class="Home">Home</div>
+                <input type="text" placeholder="Search"/>
+                <button>Download</button>
+            </div>
+        </div>
+        <div class="list">
+            <div class="home2">Home <span class="l1">14</span></div>
+            <div class="notifications">Notifications <span class="l2">3</span></div>
+            <div class="messages">Messages <span class="l3">5</span></div>
+        </div>
+
+    </div>
+</body>
+</html>
