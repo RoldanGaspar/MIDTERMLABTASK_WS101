@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_POSITION-LAB TASK 8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 3000px;
+            max-width: 900px;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(246, 235, 250, 0.702), rgba(228, 185, 255, 0.622));
+        }
+        nav{
+            height: 40px;
+            width: 900px;
+            background-color: #000000;
+            position: fixed;
+            z-index: 100;
+        }
+        h1{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+        h1:hover{
+            color: #21083f84;
+        }
+        .btn1{
+            position: absolute;
+            top: 50px;
+            left: 52rem;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            border: none;
+            background-color: black;
+            color: #fff;
+            font-weight: 600;
+            transition: all ease-in-out .3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.28);
+        }
+        .btn1:hover{
+            transform: scale(1.1);
+            transition: all ease-in-out .3s;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.28);
+        }
+        .product-container{
+            position: relative;
+            display: block;
+            margin-bottom: 2rem;
+        }
+        img{
+            width: 230px;
+            height: 240px;
+            position: relative;
+            top: 50px;
+            left: 20rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.28);
+            border-radius: 8px;
+        }
+        .sale {
+            position: absolute;
+            left: 470px;
+            top: 60px;
+            background-color: rgba(0, 0, 0, 0.766);
+            height: 30px;
+            width: 80px;
+            text-align: center;
+            transition: all ease-in-out .3s;
+            border-radius: 6px 0 0 6px;
+        }
+        .sale:hover{
+            transform: scale(1.1);
+            transition: all ease-in-out .3s;
+            border-radius: 6px;
+        }
+        p {
+            margin-top: 3px;
+            color: #fff;
+        }
+        .containerAddcart{
+            position: absolute;
+            top: 205px;
+            left: 320px;
+            background-color: #ffffffb5;
+            height: 85px;
+            width: 230px;
+            border-radius: 0 0 8px 8px;
+
+        }
+        .addcart{
+            font-size: 10px;
+            height: 30px;
+            width: 40%;
+            position: relative;
+            top: 25px;
+            left: 70px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 800;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+            transition: all ease-in-out .2s;
+        }
+        .addcart:hover{
+            transform: scale(1.1);
+            box-shadow: 0 5px 50px rgba(152, 74, 194, 0.629);
+            transition: all ease-in-out .2s;
+            font-weight: 800;
+            background-color: #0a0a0aab;
+            color: #fff;
+        }
+        .gray{
+            width: 320px;
+            height: 120px;
+            background-color: rgba(128, 128, 128, 0.763);
+            position: fixed;
+            top: 70%;
+            left: 34rem;
+        }
+    </style>
+</head>
+<body>    
+    <nav>
+        <h1>ROLDAN'S SHOP</h1>
+    </nav>
+            <button class="btn1">X</button>
+
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/423599978_1456182908417760_5786046678118122167_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG-jI8mErpnrx8Kl1my8uV87gFouoOUjeXuAWi6g5SN5Xl9X25tr2OLqXKGRPVv8C6_Z3nbNwer4SMB3spu6wF1&_nc_ohc=WDomTEKP8kwAX9brrIR&_nc_ht=scontent.fcrk1-4.fna&oh=03_AdTDZMZTSkhclCvuow50QfGwhwk_KVqb_GYgJ1GQLcZQkw&oe=661646D3" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/423619640_1092239865363321_6128033345237430119_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEiSqBVqq9bkcVIFpN5tqu1ejzslMkudiF6POyUyS52IQZXwngoandFT13gSfuxQxrrT65NJWK-jEnmMQLLcTH5&_nc_ohc=ogTcDNmRAT4AX96fF7n&_nc_ht=scontent.fcrk1-4.fna&oh=03_AdTWJ8hud3fc5JqUUQRGOvndZO5VlGwq7gmth6kOokJgHg&oe=66163161" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/385550407_793946055818249_2207459795454569715_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEwO8Ifr8hlZjDAHfBnFxOCcxZUnm_2b6dzFlSeb_ZvpztoI1dtpLKsG1XVf7TNtGjmWb9EHhSPFczLrwVBaoer&_nc_ohc=vq_XL7yVly0AX9s2K18&_nc_ht=scontent.fcrk1-3.fna&oh=03_AdTUEFF033j8zA9CUoURm4iymSP8_6jOzmF8A-71gazJcA&oe=66162C46" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-5.fna.fbcdn.net/v/t1.15752-9/387484464_865877311380853_2367452783737012520_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEhGLginWjC6qC4Xm_lt8w3cSzACySlzX5xLMALJKXNfp52wHhoT_ll-LLaJ-rvqSVbsWLzk1kydOdlQX3qrBkF&_nc_ohc=PB-BrhT-Jk0AX8zB2Jg&_nc_ht=scontent.fcrk1-5.fna&oh=03_AdTs-DzyN7fNQPyT3kW6uSIc9nurkrH0Q_Yl1zCLkRUN3w&oe=66163FF9" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/403621573_719110523607122_1980415277501798592_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEApsNTnL0Ri-R5FY7ddEo26GrBd1sc2BnoasF3WxzYGaiYThyofCwRLQ_22YEuCG1KWPoxV3EC39j9vihvvrO7&_nc_ohc=vYTgGRw7PHwAX97pFVY&_nc_ht=scontent.fcrk1-1.fna&oh=03_AdQAwTvHniB8pEbEgW5RC2DllaR7KOAYDB5lpq5yOGIuew&oe=6616239F" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/430869738_423651370328299_963215719098064419_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH2f7LEZon6L8W-jBTb8-9fZFRa_UZ8kSRkVFr9RnyRJKqEmVZycjsUDu2DEzk2eJzSpjwnFheCMNgmIvG8uWh2&_nc_ohc=YmxcuJEMC4kAX-EZD_c&_nc_ht=scontent.fcrk1-4.fna&oh=03_AdSnu74Oj1vCPEPXjzONFqKYP1GZjmO1xibUwf20rYDwrg&oe=661652D6" alt="">
+                <div class="sale"><p>20% OFF</p></div>
+                <div class="containerAddcart">
+                    <button class="addcart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>
+</body>
+</html>
